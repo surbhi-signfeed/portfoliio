@@ -21,12 +21,12 @@ export default function Experience() {
   const [ref, visible] = useInView();
 
   return (
-    <section id="experience" className="relative z-10" style={{ padding: "100px 5%" }}>
+    <section id="experience" className="relative z-10" style={{ padding: "80px 5%" }}>
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <SectionHeader label="Work History" title="Professional" highlight="Experience" />
 
         {/* Timeline */}
-        <div ref={ref} style={{ position: "relative", paddingLeft: 40 }}>
+        <div ref={ref} style={{ position: "relative", paddingLeft: 28 }}>
           <div className="timeline-line" />
 
           {experiences.map((exp, i) => (
@@ -34,86 +34,39 @@ export default function Experience() {
               key={exp.company}
               style={{
                 position: "relative",
-                marginBottom: 48,
-                paddingLeft: 28,
+                marginBottom: 40,
+                paddingLeft: 24,
                 opacity: visible ? 1 : 0,
                 transform: visible ? "translateX(0)" : "translateX(-40px)",
                 transition: `opacity 0.7s ease ${i * 0.2}s, transform 0.7s ease ${i * 0.2}s`,
               }}
             >
-              {/* Timeline dot */}
-              <div
-                className="timeline-dot"
-                style={{
-                  background: exp.color,
-                  boxShadow: `0 0 20px ${exp.color}`,
-                }}
-              />
+              <div className="timeline-dot" style={{ background: exp.color, boxShadow: `0 0 20px ${exp.color}`, left: "-33px" }} />
 
-              {/* Card */}
-              <div
-                style={{
-                  background: "rgba(255,255,255,0.03)",
-                  border: `1px solid ${exp.color}25`,
-                  borderRadius: 20,
-                  padding: 32,
-                }}
-              >
-                {/* Header */}
-                <div
-                  className="flex justify-between items-start flex-wrap gap-3 mb-5"
-                >
+              <div style={{ background: "rgba(255,255,255,0.03)", border: `1px solid ${exp.color}25`, borderRadius: 20, padding: "24px 20px" }}>
+                {/* Header — stack on mobile */}
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-3 mb-5">
                   <div>
-                    <h3
-                      className="text-xl font-extrabold text-white mb-1"
-                      style={{ fontFamily: "var(--font-syne)" }}
-                    >
+                    <h3 className="text-lg md:text-xl font-extrabold text-white mb-1" style={{ fontFamily: "var(--font-syne)" }}>
                       {exp.role}
                     </h3>
-                    <p className="font-semibold text-base" style={{ color: exp.color }}>
-                      {exp.company}
-                    </p>
+                    <p className="font-semibold text-sm md:text-base" style={{ color: exp.color }}>{exp.company}</p>
                   </div>
-                  <div className="flex gap-3 items-center flex-wrap">
-                    <span
-                      className="text-xs font-semibold tracking-wide px-3 py-1 rounded-full"
-                      style={{
-                        background: "rgba(255,255,255,0.06)",
-                        color: "rgba(226,232,240,0.6)",
-                      }}
-                    >
+                  <div className="flex gap-2 items-center flex-wrap">
+                    <span className="text-xs font-semibold tracking-wide px-3 py-1 rounded-full" style={{ background: "rgba(255,255,255,0.06)", color: "rgba(226,232,240,0.6)" }}>
                       {exp.type}
                     </span>
-                    <span
-                      className="text-sm font-semibold px-4 py-1.5 rounded-full"
-                      style={{
-                        background: `${exp.color}15`,
-                        border: `1px solid ${exp.color}40`,
-                        color: exp.color,
-                      }}
-                    >
+                    <span className="text-xs md:text-sm font-semibold px-3 py-1 rounded-full" style={{ background: `${exp.color}15`, border: `1px solid ${exp.color}40`, color: exp.color }}>
                       {exp.period}
                     </span>
                   </div>
                 </div>
 
-                {/* Highlights grid */}
-                <ul
-                  className="grid gap-2.5"
-                  style={{ gridTemplateColumns: "1fr 1fr", listStyle: "none" }}
-                >
+                {/* Highlights: 1 col on mobile, 2 col on md+ */}
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-2" style={{ listStyle: "none" }}>
                   {exp.highlights.map((h) => (
-                    <li
-                      key={h}
-                      className="flex gap-2.5 text-sm leading-relaxed"
-                      style={{ color: "rgba(226,232,240,0.7)" }}
-                    >
-                      <span
-                        className="mt-1 flex-shrink-0"
-                        style={{ color: exp.color }}
-                      >
-                        ▸
-                      </span>
+                    <li key={h} className="flex gap-2 text-sm leading-relaxed" style={{ color: "rgba(226,232,240,0.7)" }}>
+                      <span className="mt-1 flex-shrink-0" style={{ color: exp.color }}>▸</span>
                       {h}
                     </li>
                   ))}
@@ -123,34 +76,21 @@ export default function Experience() {
           ))}
         </div>
 
-        {/* Education */}
-        <div style={{ marginTop: 64 }}>
-          <h3
-            className="text-2xl font-bold text-white text-center mb-8"
-            style={{ fontFamily: "var(--font-syne)" }}
-          >
+        {/* Education: 1 col mobile, 2 col md+ */}
+        <div style={{ marginTop: 56 }}>
+          <h3 className="text-xl md:text-2xl font-bold text-white text-center mb-8" style={{ fontFamily: "var(--font-syne)" }}>
             Education 🎓
           </h3>
-          <div className="grid grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             {education.map((ed) => (
-              <div
-                key={ed.degree}
-                className="card flex items-center gap-5 p-7"
-              >
-                <div className="text-4xl flex-shrink-0">{ed.icon}</div>
+              <div key={ed.degree} className="card flex items-center gap-4 p-5 md:p-7">
+                <div className="text-3xl md:text-4xl flex-shrink-0">{ed.icon}</div>
                 <div>
-                  <div
-                    className="font-bold text-white text-base mb-1"
-                    style={{ fontFamily: "var(--font-syne)" }}
-                  >
+                  <div className="font-bold text-white text-sm md:text-base mb-1" style={{ fontFamily: "var(--font-syne)" }}>
                     {ed.degree}
                   </div>
-                  <div className="text-sm mb-1" style={{ color: "#a78bfa" }}>
-                    {ed.school}
-                  </div>
-                  <div className="text-xs" style={{ color: "rgba(226,232,240,0.5)" }}>
-                    {ed.year}
-                  </div>
+                  <div className="text-xs md:text-sm mb-1" style={{ color: "#a78bfa" }}>{ed.school}</div>
+                  <div className="text-xs" style={{ color: "rgba(226,232,240,0.5)" }}>{ed.year}</div>
                 </div>
               </div>
             ))}
