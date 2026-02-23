@@ -1,0 +1,155 @@
+export const personalInfo = {
+  name: "Surbhi Gulhana",
+  title: "Full Stack Developer",
+  tagline: "Building high-performance web apps with ReactJS, Next.js & Node.js.",
+  bio: "Full Stack Developer based in Delhi, India with 3+ years of experience crafting end-to-end web solutions. I specialize in scalable applications using the modern JavaScript ecosystem — from complex RBAC systems and payment gateways to real-time dashboards and loyalty programs.",
+  email: "surbhigulhana3@gmail.com",
+  phone: "+91 7869849719",
+  location: "Delhi, India – 110092",
+  linkedin: "https://www.linkedin.com/in/surbhi-gulhanaa23966199",
+  github: "https://github.com/",
+  stats: [
+    { value: "3+", label: "Years Exp" },
+    { value: "10+", label: "Projects" },
+    { value: "2", label: "Companies" },
+  ],
+};
+
+export const skills = [
+  { name: "React.js",      level: 95, icon: "⚛️",  category: "Frontend" },
+  { name: "Next.js",       level: 90, icon: "▲",   category: "Frontend" },
+  { name: "TypeScript",    level: 82, icon: "🔷",  category: "Language" },
+  { name: "Tailwind CSS",  level: 92, icon: "🎨",  category: "Frontend" },
+  { name: "Node.js",       level: 88, icon: "🟢",  category: "Backend"  },
+  { name: "NestJS",        level: 78, icon: "🐦",  category: "Backend"  },
+  { name: "Express.js",    level: 86, icon: "🚂",  category: "Backend"  },
+  { name: "MongoDB",       level: 85, icon: "🍃",  category: "Database" },
+  { name: "MySQL",         level: 80, icon: "🗄️",  category: "Database" },
+  { name: "Firebase",      level: 83, icon: "🔥",  category: "Database" },
+  { name: "AWS EC2",       level: 75, icon: "☁️",  category: "Cloud"    },
+  { name: "HTML / CSS",    level: 95, icon: "🌐",  category: "Frontend" },
+];
+
+export const experiences = [
+  {
+    role: "Full Stack Developer",
+    company: "Harij Softech Private Limited",
+    period: "Nov 2023 – Present",
+    color: "#00f5c4",
+    type: "Full Time",
+    highlights: [
+      "Implemented RBAC & JWT authentication for secure routing across digital signage platforms.",
+      "Integrated Razorpay & additional payment gateways for secure transaction workflows.",
+      "Designed and optimized cron jobs for automated real-time data synchronization.",
+      "Built a Tire Quotation Management System with pricing logic and admin controls.",
+      "Created Security Risk & Compliance Checker integrating Slack & Jira APIs.",
+      "Built Time Tracking & Case Management Server with Firebase FCM notifications.",
+      "Designed Loyalty Logic System with tier-based earning, upgrades, and rewards.",
+      "Developed Sales Reporting Dashboard with brand-wise and customer-wise analytics.",
+    ],
+  },
+  {
+    role: "Full Stack Developer",
+    company: "Omkatech LLP",
+    period: "Jun 2022 – Sep 2023",
+    color: "#a78bfa",
+    type: "Full Time",
+    highlights: [
+      "Built fully responsive web applications using React, Node.js, Bootstrap & Tailwind.",
+      "Hands-on experience with AWS EC2 and cPanel deployments.",
+      "Used Firebase & MongoDB for scalable database technology.",
+      "Collaborated with dev teams to ship features, fix bugs, and make upgrades.",
+      "Developed responsive websites based on direct client requirements.",
+    ],
+  },
+];
+
+export const education = [
+  {
+    degree: "Master of Science in Computer Science",
+    school: "Jiwaji University, Gwalior",
+    year: "August 2022",
+    icon: "🎓",
+  },
+  {
+    degree: "Bachelor of Science in Computer Science",
+    school: "Kamla Raja Girls Govt. PG College, Gwalior",
+    year: "September 2020",
+    icon: "📚",
+  },
+];
+
+export const projects = [
+  {
+    title: "Social Media Management Platform",
+    desc: "Platform to connect & manage YouTube, Instagram, Twitter, and Facebook accounts. Enabled post scheduling, automated data syncing, insights fetching, and analytics.",
+    tags: ["React", "Node.js", "Google Cloud", "Facebook API"],
+    icon: "📱",
+    color: "#00f5c4",
+    featured: true,
+  },
+  {
+    title: "Loyalty Logic & Sales System",
+    desc: "Complete loyalty program with tier-based earning, real-time rewards, redemption logic, fraud-safe validation, and advanced sales reporting dashboard.",
+    tags: ["Next.js", "MongoDB", "Node.js", "Analytics"],
+    icon: "🏆",
+    color: "#f59e0b",
+    featured: true,
+  },
+  {
+    title: "Secure Flow Risk & Compliance",
+    desc: "Workflow system integrating Slack & Jira APIs for automated ticketing, risk reporting, compliance tracking with RBAC and encryption.",
+    tags: ["Node.js", "Slack API", "Jira API", "Security"],
+    icon: "🔐",
+    color: "#a78bfa",
+    featured: true,
+  },
+  {
+    title: "Tire Quotation Management",
+    desc: "Quotation module for tire retailers with product catalog, pricing logic, discount rules, automatic quotation creation, and admin controls.",
+    tags: ["React", "Express", "MySQL"],
+    icon: "🔧",
+    color: "#fb7185",
+    featured: false,
+  },
+  {
+    title: "Time Tracking & Task Server",
+    desc: "Case management server using MP rule-based logic with status workflows, document handling, audits, and real-time notifications via Firebase FCM.",
+    tags: ["Node.js", "Firebase", "MongoDB"],
+    icon: "⏱️",
+    color: "#38bdf8",
+    featured: false,
+  },
+  {
+    title: "Virtual Office Platform",
+    desc: "Virtual office with modules for Admin, Team Lead & Employee — supporting task management, meetings, customer handling, and purchasing workflows.",
+    tags: ["React", "Node.js", "MongoDB"],
+    icon: "🏢",
+    color: "#4ade80",
+    featured: false,
+  },
+  {
+    title: "Pharma Management System",
+    desc: "Inventory and billing dashboard for pharmacies covering stock management, staff salary tracking, and product sales analytics.",
+    tags: ["React", "Node.js", "MySQL"],
+    icon: "💊",
+    color: "#f97316",
+    featured: false,
+  },
+  {
+    title: "Digital Signage Backend",
+    desc: "Secure backend with JWT authentication, RBAC, and payment gateway integration enabling permission-based routing and controlled access.",
+    tags: ["Node.js", "JWT", "RBAC"],
+    icon: "📺",
+    color: "#e879f9",
+    featured: false,
+  },
+  {
+    title: "Online Lash Supply (E-commerce)",
+    desc: "E-commerce platform for lash products with attribute-based filtering by color, size & length and a smooth shopping experience.",
+    tags: ["React", "Node.js", "MongoDB"],
+    icon: "🛍️",
+    color: "#34d399",
+    featured: false,
+  },
+];
